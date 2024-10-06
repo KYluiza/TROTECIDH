@@ -34,10 +34,10 @@ Este projeto tem como objetivo analisar manchetes de notícias relacionadas ao t
 Utilizamos web scraping para coletar manchetes de diferentes fontes de notícias online, incluindo pesquisas específicas no Google News para universidades como USP, UNICAMP, UNESP e notícias gerais sobre trote universitário.
 
 URLs utilizadas para coleta:
-- **USP**: [Google News - USP](https://www.google.com/search?q=trote+universit%C3%A1rio+USP)
-- **UNICAMP**: [Google News - UNICAMP](https://www.google.com/search?q=trote+universit%C3%A1rio+UNICAMP)
-- **UNESP**: [Google News - UNESP](https://www.google.com/search?q=trote+universit%C3%A1rio+UNESP)
-- **Trote Universitário Geral**: [Google News - Geral](https://www.google.com/search?q=trote+universit%C3%A1rio)
+- **USP**: [Notícias sobre trote na USP](https://www.google.com/search?q=trote+universit%C3%A1rio+USP&sca_esv=cd8f201e94c2caf3&rlz=1C1GCEA_enBR1125BR1125&tbm=nws&ei=YakBZ_CSNKzO1sQPpIm_yQc&start={start_value}&sa=N&ved=2ahUKEwiwx8XWkfiIAxUsp5UCHaTEL3k4KBDy0wN6BAgCEAQ&biw=1280&bih=585&dpr=1.5)
+- **UNICAMP**: [Notícias sobre trote na UNICAMP](https://www.google.com/search?q=trote+universit%C3%A1rio+UNICAMP&sca_esv=cd8f201e94c2caf3&rlz=1C1GCEA_enBR1125BR1125&tbm=nws&ei=YakBZ_CSNKzO1sQPpIm_yQc&start={start_value}&sa=N&ved=2ahUKEwiwx8XWkfiIAxUsp5UCHaTEL3k4KBDy0wN6BAgCEAQ&biw=1280&bih=585&dpr=1.5)
+- **UNESP**: [Notícias sobre trote na UNESP](https://www.google.com/search?q=trote+universit%C3%A1rio+UNESP&sca_esv=cd8f201e94c2caf3&rlz=1C1GCEA_enBR1125BR1125&tbm=nws&ei=YakBZ_CSNKzO1sQPpIm_yQc&start={start_value}&sa=N&ved=2ahUKEwiwx8XWkfiIAxUsp5UCHaTEL3k4KBDy0wN6BAgCEAQ&biw=1280&bih=585&dpr=1.5)
+- **Trote Universitário Geral**: [Notícias sobre trote universitário](https://www.google.com/search?q=trote+universit%C3%A1rio&sca_esv=cd8f201e94c2caf3&rlz=1C1GCEA_enBR1125BR1125&tbm=nws&ei=YakBZ_CSNKzO1sQPpIm_yQc&start={start_value}&sa=N&ved=2ahUKEwiwx8XWkfiIAxUsp5UCHaTEL3k4KBDy0wN6BAgCEAQ&biw=1280&bih=585&dpr=1.5)
 
 O script de raspagem abre as páginas, copia o conteúdo das manchetes e as salva em um arquivo CSV para posterior análise.
 
