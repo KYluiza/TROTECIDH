@@ -49,7 +49,7 @@ Palavras-chave utilizadas:
 - **Negativas**: "nega", 'absurdo', 'agredid', 'racismo', "racista", 'denúncia', 'fracasso', 'queda', 'erro', 'morte', 'tóxico', 'expulso', 'crime', 'perda', 'violência', "estupro", "errado", "morre", "abandon"
 
 ### 3. Análise de Sentimentos com Modelos de Machine Learning
-Utilizamos diferentes modelos de aprendizado de máquina para prever a classificação das manchetes. Os modelos incluem Naive Bayes, Árvore de Decisão, Regressão Logística, Random Forest e Support Vector Machines (SVM). Os dados são divididos em conjuntos de treino e teste (70% treino e 30% teste), e aplicamos validação cruzada e ajuste de hiperparâmetros para otimizar os modelos.
+Utilizamos diferentes modelos de aprendizado de máquina para prever a classificação das manchetes. Os modelos incluem Naive Bayes, Árvore de Decisão, Regressão Logística, Random Forest e Support Vector Machines (SVM). Os dados são divididos em conjuntos de treino e teste (70% teste e 30% treino), e aplicamos validação cruzada e ajuste de hiperparâmetros para otimizar os modelos.
 
 ## Modelos de Aprendizado de Máquina
 
