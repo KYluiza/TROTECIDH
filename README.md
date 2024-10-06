@@ -75,11 +75,15 @@ A validação cruzada é uma técnica que divide o conjunto de dados em vários 
 
 Ao avaliar os modelos de aprendizado de máquina, utilizamos quatro principais métricas: **Precisão (Precision)**, **Recall**, **F1-score** e **Acurácia**. Essas métricas fornecem uma visão detalhada sobre o desempenho do modelo, especialmente em problemas de classificação com múltiplas classes.
 
+## Métricas de Avaliação
+
+Ao avaliar os modelos de aprendizado de máquina, utilizamos quatro principais métricas: **Precisão (Precision)**, **Recall**, **F1-score** e **Acurácia**. Essas métricas fornecem uma visão detalhada sobre o desempenho do modelo, especialmente em problemas de classificação com múltiplas classes.
+
 ### **Precisão (Precision)**
 
 A **Precisão** mede a proporção de previsões corretas para uma classe específica entre todas as previsões feitas para essa classe. Ela é útil quando o foco está em minimizar o número de falsos positivos (previsões incorretas como pertencentes a uma classe).
 
-$[\text{Precisão} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Positivos (FP)}}\]
+$\text{Precisão} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Positivos (FP)}}$
 
 - **Verdadeiros Positivos (TP)**: Instâncias que pertencem a uma classe e foram corretamente classificadas como tal.
 - **Falsos Positivos (FP)**: Instâncias que não pertencem a uma classe, mas foram incorretamente classificadas como pertencendo a ela.
@@ -87,28 +91,22 @@ $[\text{Precisão} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros 
 **Exemplo de Cálculo**:
 Se o modelo previu corretamente 80 manchetes negativas como "Negativa" (TP) e previu incorretamente 20 manchetes neutras como "Negativa" (FP), a precisão para a classe "Negativa" seria:
 
-$\[
-\text{Precisão} = \frac{80}{80 + 20} = 0.80 \, (80\%)
-\]
+$\text{Precisão} = \frac{80}{80 + 20} = 0.80 \, (80\%)$
 
 ---
 
 ### **Recall**
 
-O **Recall** mede a capacidade do modelo de identificar corretamente todas as instâncias relevantes de uma classe específica. Ele é útil quando o objetivo é minimizar os falsos negativos, ou seja, instâncias que pertencem a uma classe mas que o modelo falhou em identificar.
+O **Recall** mede a capacidade do modelo de identificar corretamente todas as instâncias relevantes de uma classe específica. Ele é útil quando o objetivo é minimizar os falsos negativos, ou seja, instâncias que pertencem a uma classe, mas que o modelo falhou em identificar.
 
-$\[
-\text{Recall} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Negativos (FN)}}
-\]
+$\text{Recall} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Negativos (FN)}}$
 
 - **Falsos Negativos (FN)**: Instâncias que pertencem a uma classe, mas foram classificadas incorretamente como pertencendo a outra classe.
 
 **Exemplo de Cálculo**:
 Se de 100 manchetes negativas, o modelo classificou corretamente 80 como "Negativa" (TP), mas classificou 20 incorretamente como neutras ou positivas (FN), o recall seria:
 
-$\[
-\text{Recall} = \frac{80}{80 + 20} = 0.80 \, (80\%)
-\]
+$\text{Recall} = \frac{80}{80 + 20} = 0.80 \, (80\%)$
 
 ---
 
@@ -116,16 +114,12 @@ $\[
 
 O **F1-score** é a média harmônica entre a precisão e o recall. Ele é particularmente útil quando há um desequilíbrio entre as classes, pois equilibra o impacto de ambas as métricas.
 
-$\[
-F1 = 2 \times \frac{\text{Precisão} \times \text{Recall}}{\text{Precisão} + \text{Recall}}
-\]
+$F1 = 2 \times \frac{\text{Precisão} \times \text{Recall}}{\text{Precisão} + \text{Recall}}$
 
 **Exemplo de Cálculo**:
 Se a precisão e o recall de um modelo para uma classe são ambos 0.80, o F1-score será:
 
-$\[
-F1 = 2 \times \frac{0.80 \times 0.80}{0.80 + 0.80} = 0.80
-\]
+$F1 = 2 \times \frac{0.80 \times 0.80}{0.80 + 0.80} = 0.80$
 
 ---
 
@@ -133,22 +127,12 @@ F1 = 2 \times \frac{0.80 \times 0.80}{0.80 + 0.80} = 0.80
 
 A **Acurácia** mede a proporção de previsões corretas em relação ao total de previsões feitas. Ela é uma métrica geral que considera todas as classes, mas pode ser enganosa em casos de classes desbalanceadas.
 
-$\[
-\text{Acurácia} = \frac{\text{Previsões Corretas}}{\text{Total de Previsões}}
-\]
-
-Ou, em termos de matriz de confusão:
-
-$\[
-\text{Acurácia} = \frac{\text{Verdadeiros Positivos (TP)} + \text{Verdadeiros Negativos (TN)}}{\text{Total de Instâncias}}
-\]
+$\text{Acurácia} = \frac{\text{Verdadeiros Positivos (TP)} + \text{Verdadeiros Negativos (TN)}}{\text{Total de Instâncias}}$
 
 **Exemplo de Cálculo**:
 Se o modelo classificou corretamente 150 de 200 manchetes, a acurácia será:
 
-$\[
-\text{Acurácia} = \frac{150}{200} = 0.75 \, (75\%)
-\]
+$\text{Acurácia} = \frac{150}{200} = 0.75 \, (75\%)$
 
 ---
 
