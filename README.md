@@ -79,9 +79,7 @@ Ao avaliar os modelos de aprendizado de máquina, utilizamos quatro principais m
 
 A **Precisão** mede a proporção de previsões corretas para uma classe específica entre todas as previsões feitas para essa classe. Ela é útil quando o foco está em minimizar o número de falsos positivos (previsões incorretas como pertencentes a uma classe).
 
-\[
-\text{Precisão} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Positivos (FP)}}
-\]
+\[\text{Precisão} = \frac{\text{Verdadeiros Positivos (TP)}}{\text{Verdadeiros Positivos (TP)} + \text{Falsos Positivos (FP)}}\]
 
 - **Verdadeiros Positivos (TP)**: Instâncias que pertencem a uma classe e foram corretamente classificadas como tal.
 - **Falsos Positivos (FP)**: Instâncias que não pertencem a uma classe, mas foram incorretamente classificadas como pertencendo a ela.
