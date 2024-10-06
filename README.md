@@ -1,4 +1,3 @@
-# Descrição do projeto de análise das manchetes sobre o trote universitário 
 # Análise das Manchetes sobre Trote Universitário
 
 ## Descrição do Projeto
