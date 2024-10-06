@@ -75,10 +75,6 @@ A validação cruzada é uma técnica que divide o conjunto de dados em vários 
 
 Ao avaliar os modelos de aprendizado de máquina, utilizamos quatro principais métricas: **Precisão (Precision)**, **Recall**, **F1-score** e **Acurácia**. Essas métricas fornecem uma visão detalhada sobre o desempenho do modelo, especialmente em problemas de classificação com múltiplas classes.
 
-## Métricas de Avaliação
-
-Ao avaliar os modelos de aprendizado de máquina, utilizamos quatro principais métricas: **Precisão (Precision)**, **Recall**, **F1-score** e **Acurácia**. Essas métricas fornecem uma visão detalhada sobre o desempenho do modelo, especialmente em problemas de classificação com múltiplas classes.
-
 ### **Precisão (Precision)**
 
 A **Precisão** mede a proporção de previsões corretas para uma classe específica entre todas as previsões feitas para essa classe. Ela é útil quando o foco está em minimizar o número de falsos positivos (previsões incorretas como pertencentes a uma classe).
