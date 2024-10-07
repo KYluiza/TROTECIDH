@@ -7,7 +7,7 @@ Este projeto tem como objetivo analisar manchetes de notícias relacionadas ao t
 - Coletar manchetes de notícias sobre trote universitário.
 - Classificar as manchetes como Positivas, Negativas ou Neutras com base em palavras-chave.
 - Utilizar diferentes modelos de aprendizado de máquina para refinar a análise e prever a polaridade das manchetes.
-- Avaliar a performance dos modelos utilizando validação cruzada e ajuste de hiperparâmetros.
+- Melhoramos a performance dos modelos utilizando validação cruzada e ajuste de hiperparâmetros.
 
 ## Tecnologias Utilizadas
 - **Linguagem de Programação**: Python
