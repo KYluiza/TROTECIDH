@@ -46,7 +46,7 @@ As manchetes são limpas para remover inconsistências e normalizar termos como 
 
 Palavras-chave utilizadas:
 - **Positivas**: "sucesso", "aprovação", "conquista", "crescimento", "vitória", "melhora", "lei proíbe", "proíbe", "proibid"
-- **Negativas**: "nega", 'absurdo', 'agredid', 'racismo', "racista", 'denúncia', 'fracasso', 'queda', 'erro', 'morte', 'tóxico', 'expulso', 'crime', 'perda', 'violência', "estupro", "errado", "morre", "abandon"
+- **Negativas**: "nega", 'absurdo', 'coma', 'agredid', 'racismo', "racista", 'denúncia', 'fracasso', 'queda', 'erro', 'morte', 'tóxico', 'expulso', 'crime', 'perda', 'violência', "estupro", "errado", "morre", "abandon"
 
 ### 3. Análise de Sentimentos com Modelos de Machine Learning
 Utilizamos diferentes modelos de aprendizado de máquina para prever a classificação das manchetes. Os modelos incluem Naive Bayes, Árvore de Decisão, Regressão Logística, Random Forest e Support Vector Machines (SVM). Os dados são divididos em conjuntos de treino e teste (70% teste e 30% treino), e aplicamos validação cruzada e ajuste de hiperparâmetros para otimizar os modelos.
