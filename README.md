@@ -138,7 +138,7 @@ Essas métricas foram utilizadas para avaliar a performance dos modelos de apren
 ## Análise dos Resultados
 
 ### 0. **Resultados descritivos abertos**
-- **Dashboard trote universitário**: [Dashboard aberto]([https://app.powerbi.com/view?r=eyJrIjoiMDZkMzNmZjctZDRiMS00MmEyLTk0NzItNjFhYTQ2NDU0NGE1IiwidCI6ImViZjIyYzg0LThiNzAtNGMyNy05NGYzLTRhMWNjNjRlYThhNCJ9](https://app.powerbi.com/view?r=eyJrIjoiYjdmZThhMDctNjkwOS00MzUyLTg3ZWMtMGNkNWUzNDhhOTczIiwidCI6ImZlODc4N2JjLWM5MTQtNDY2NS04NTQ3LTI2OGUxNWNiMGQ5YSJ9))
+- **Dashboard trote universitário**: [Dashboard aberto]([https://app.powerbi.com/view?r=eyJrIjoiMDZkMzNmZjctZDRiMS00MmEyLTk0NzItNjFhYTQ2NDU0NGE1IiwidCI6ImViZjIyYzg0LThiNzAtNGMyNy05NGYzLTRhMWNjNjRlYThhNCJ9])
 
 ### 1. **Naive Bayes**
 - **Acurácia (Validação Cruzada)**: 0.7730
