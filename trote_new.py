@@ -9,6 +9,9 @@ import random
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta  # Certifique-se de ter o módulo dateutil instalado
 
+# Dicionário para realizar o looping de pesquisa sobre as universidades
+universidades = ['', 'UNESP', 'USP', 'UNICAMP'] 
+
 # Dicionário para converter os meses por extenso para seus números correspondentes
 meses = {
     'jan': '01', 'fev': '02', 'mar': '03', 'abr': '04', 'mai': '05', 'jun': '06',
@@ -109,44 +112,50 @@ def classificar_linhas(texto, data_base, numero_inicial):
 
 # Função principal para raspagem de páginas
 def raspar_paginas():
-    noticias = []  # Lista para armazenar todas as notícias
-    # Definir a data base como 29/09/2024 conforme seu exemplo
+    noticias = []
     data_base = datetime(2024, 9, 29)
-    numero_noticia = 1  # Número inicial da notícia
+    numero_noticia = 1
 
-    for page in range(0, 1):  # Loop para as 45 páginas
-        print(f"Raspando a página {page + 1} de 45")
-        start_value = page * 10
-        url = f'https://www.google.com/search?q=trote+universit%C3%A1rio+FAMERP&sca_esv=cd8f201e94c2caf3&rlz=1C1GCEA_enBR1125BR1125&tbm=nws&ei=YakBZ_CSNKzO1sQPpIm_yQc&start={start_value}&sa=N&ved=2ahUKEwiwx8XWkfiIAxUsp5UCHaTEL3k4KBDy0wN6BAgCEAQ&biw=1280&bih=585&dpr=1.5'
-        
-        webbrowser.open(url)
-        time.sleep(8)  # Tempo para garantir o carregamento
-        
-        pyautogui.hotkey('ctrl', 'a')  # Seleciona todo o texto
-        pyautogui.hotkey('ctrl', 'c')  # Copia o texto
-        time.sleep(1)  # Aguarda para garantir que o texto foi copiado
-        texto = pyperclip.paste()  # Obtém o texto copiado da área de transferência
-        
-        texto_limpo = limpar_texto(texto)  # Aplica a função de limpeza
-        noticias_pagina = classificar_linhas(texto_limpo, data_base, numero_noticia)  # Classifica as linhas
-        noticias.extend(noticias_pagina)  # Adiciona as notícias da página à lista total
-        numero_noticia += len(noticias_pagina)  # Atualiza o número da notícia
-        
-        time.sleep(2)  # Intervalo antes de fechar a aba
-        pyautogui.hotkey('ctrl', 'w')  # Fecha a aba atual
-        # Tempo aleatório entre 5 e 10 segundos antes de abrir a próxima página
-        time.sleep(random.uniform(5, 10))
+    # loop externo: cada termo de busca
+    for uni in universidades:
+        # monta o termo: "trote universitário" + uni (se houver)
+        termo = 'trote universitário' + (f' {uni}' if uni else '')
+        q = urllib.parse.quote_plus(termo)  # transforma espaços em + e acentos em %xx
 
-    # Escreve os dados em um arquivo CSV
+        # loop interno: páginas de 0 até 44 (45 páginas -> 0..44)
+        for page in range(45):
+            start_value = page * 10
+            url = f'https://www.google.com/search?q={q}&tbm=nws&start={start_value}'
+            
+            print(f"🔍 Buscando “{termo}” — página {page+1}/45")
+            webbrowser.open(url)
+            time.sleep(8)
+
+            # copia todo o texto da página
+            pyautogui.hotkey('ctrl', 'a')
+            pyautogui.hotkey('ctrl', 'c')
+            time.sleep(1)
+            texto = pyperclip.paste()
+
+            # limpa e classifica (suas funções existentes)
+            texto_limpo = limpar_texto(texto)
+            noticias_pagina = classificar_linhas(texto_limpo, data_base, numero_noticia)
+            noticias.extend(noticias_pagina)
+            numero_noticia += len(noticias_pagina)
+
+            # fecha aba e espera um pouco
+            pyautogui.hotkey('ctrl', 'w')
+            time.sleep(random.uniform(5, 10))
+
+    # grava CSV no final
     with open('noticias.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['Número', 'Fonte', 'Manchete', 'Descrição', 'Data']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
         writer.writeheader()
         for noticia in noticias:
             writer.writerow(noticia)
 
-    print("Arquivo 'NOTICIAS - MANCHETES.csv' criado com sucesso.")
+    print("✅ 'NOTICIAS - MANCHETES.csv' gerado com sucesso!")
 
 # Chama a função principal
 raspar_paginas()
